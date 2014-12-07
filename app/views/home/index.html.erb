@@ -1,0 +1,26 @@
+<div class="container">
+	<h1>chat board</h1>
+
+	<ul>
+		<% @topic.each do |topic| %>
+			<li>
+				<span class="board-section"><%= link_to topic.title, topic_path(topic) %></span>
+				<span class="board-section"><%= topic.user %></span>
+				<span class="board-section"><%= topic.created_at.strftime("%r %a %b %e %Y") %></span>
+			</li>
+			<!-- <li>
+				<%= topic.user %>
+			</li>
+			<li>
+				<%= topic.created_at.strftime("%m/%d/%Y at %l") %>
+			</li> -->
+		<% end %> 
+	</ul>
+
+	<% if user_signed_in? %>
+		<%= link_to "new topic", new_topic_path %> </br>
+		<%= link_to "log out", destroy_user_session_path, method: :delete %>
+	<% else %>
+		<%= link_to "sign in", new_user_session_path %>
+	<% end %>
+</div>

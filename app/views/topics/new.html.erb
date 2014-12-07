@@ -1,0 +1,18 @@
+<div class="container">
+	<h1>new post here</h1>
+
+	<%= form_for(@topic) do |f| %>
+	<p>
+		<%= f.label :title %>
+		<%= f.text_field :title %>
+	</p>
+	<p>
+		<%= f.label :content %>
+		<%= f.text_area :content %>
+	</p>
+	<p><%= current_user.email %></p>
+	<p>
+		<%= f.submit %>
+	</p>
+<% end %>
+</div>
