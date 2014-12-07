@@ -3,6 +3,7 @@ class TopicsController < ApplicationController
 
 	def index
 		@topic = Topic.all
+
 	end
 
 	def new
@@ -32,6 +33,9 @@ class TopicsController < ApplicationController
 
 		if @topic.valid?
 			redirect_to topic_path(@topic)
+			current_user.saved_title = nil
+			current_user.saved_content = nil
+			current_user.save
 		else 
 			puts "---------"
 			puts @topic.inspect
@@ -40,7 +44,7 @@ class TopicsController < ApplicationController
 				@current_user.saved_content = @topic.content
 				@current_user.saved_title = nil
 			elsif @topic.content == ""
-				@current_user.saved_title = nil
+				@current_user.saved_content = nil
 				@current_user.saved_title = @topic.title
 			end
 			# puts @current_user.inspect
