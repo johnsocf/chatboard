@@ -25,7 +25,10 @@
       <span class="bold">
         <%= current_user.email %>
       </span>
-      </span> |<%= link_to "log out", destroy_user_session_path, method: :delete %>
+      |
+      <span>
+        <%= link_to "log out", destroy_user_session_path, method: :delete %>
+      </span> 
       </p>
     <% end %>
     

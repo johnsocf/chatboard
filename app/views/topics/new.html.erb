@@ -4,11 +4,12 @@
 	<%= form_for(@topic) do |f| %>
 	<p>
 		<%= f.label :title %>
-		<%= f.text_field :title %>
+		<%= f.text_field :title, :value => current_user.saved_title %>
+		<!-- <span><%= current_user.saved_title %></span> -->
 	</p>
 	<p>
 		<%= f.label :content %>
-		<%= f.text_area :content %>
+		<%= f.text_area :content, :value => current_user.saved_content %>
 	</p>
 	<p><%= current_user.email %></p>
 	<p>
