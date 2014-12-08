@@ -1,0 +1,11 @@
+<div class="container">
+	<h1>articles tagged with <%= @tag.name %></h1>
+
+	<ul>
+		<% @tag.topics.each do |topic| %>
+			<li>
+				<%= link_to topic.title, topic_path(topic) %>
+			</li>
+		<% end %>
+	</ul>
+</div>

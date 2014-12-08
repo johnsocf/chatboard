@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141207211843) do
+ActiveRecord::Schema.define(version: 20141208033908) do
 
   create_table "homes", force: true do |t|
     t.datetime "created_at"
@@ -27,6 +27,32 @@ ActiveRecord::Schema.define(version: 20141207211843) do
     t.datetime "updated_at"
   end
 
+  create_table "taggings", force: true do |t|
+    t.integer  "tag_id"
+    t.integer  "article_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "taggings", ["article_id"], name: "index_taggings_on_article_id"
+  add_index "taggings", ["tag_id"], name: "index_taggings_on_tag_id"
+
+  create_table "taggroups", force: true do |t|
+    t.integer  "tag_id"
+    t.integer  "topic_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "taggroups", ["tag_id"], name: "index_taggroups_on_tag_id"
+  add_index "taggroups", ["topic_id"], name: "index_taggroups_on_topic_id"
+
+  create_table "tags", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "topics", force: true do |t|
     t.string   "title"
     t.text     "content"
@@ -35,6 +61,10 @@ ActiveRecord::Schema.define(version: 20141207211843) do
     t.string   "user"
     t.string   "saved_title"
     t.string   "saved_content"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   create_table "users", force: true do |t|

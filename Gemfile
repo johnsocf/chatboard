@@ -16,6 +16,8 @@ gem 'coffee-rails', '~> 4.0.0'
 
 gem 'devise'
 
+gem "paperclip"
+
 gem 'bootstrap-sass', '~> 3.3.1'
 gem 'autoprefixer-rails'
 

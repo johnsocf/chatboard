@@ -1,11 +1,19 @@
 <div class="container">
 	<h1>new post here</h1>
 
-	<%= form_for(@topic) do |f| %>
+	<%= form_for(@topic, html: {multipart: true}) do |f| %>
 		<p>
 			<%= f.label :title %>
 			<%= f.text_field :title, :value => current_user.saved_title %>
 			<!-- <span><%= current_user.saved_title %></span> -->
+		</p>
+		<p>
+			<%= f.label :tag_list %>
+			<%= f.text_field :tag_list %>
+		</p>
+		<p>
+			<%= f.label :image, "attach an image" %>
+			<%= f.file_field :image %>
 		</p>
 		<p>
 			<%= f.label :content %>
