@@ -64,6 +64,8 @@ class TopicsController < ApplicationController
 
 	def show
 		@topic = Topic.find(params[:id])
+		@replies = Reply.new
+		@replies.topic_id = @topic.id
 	end
 
 	def destroy

@@ -17,4 +17,9 @@
 	<p>
 		<%= link_to "destroy topic", topic_path, method: :delete %> </br>
 	</p>
+
+	<h3>Comments (<%= @topic.replies.size %>)</h3>
+	<%= render partial: 'topics/reply', collection: @topic.replies %>
+
+	<%= render partial: 'replies/form' %>
 </div>
