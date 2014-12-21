@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c8b47887-1303-4d21-affc-5230647d0474" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
     </list>
     <ignored path="chatboard.iws" />
@@ -47,7 +46,7 @@
       <file leaf-file-name="Gemfile" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="3" selection-start="273" selection-end="273" vertical-scroll-proportion="0.4257642" vertical-offset="0" max-vertical-offset="885">
+            <state line="5" column="12" selection-start="129" selection-end="129" vertical-scroll-proportion="0.1736111" vertical-offset="0" max-vertical-offset="915">
               <folding />
             </state>
           </provider>
@@ -480,7 +479,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="3" selection-start="273" selection-end="273" vertical-scroll-proportion="0.4257642" vertical-offset="0" max-vertical-offset="885">
+        <state line="5" column="12" selection-start="129" selection-end="129" vertical-scroll-proportion="0.1736111" vertical-offset="0" max-vertical-offset="915">
           <folding />
         </state>
       </provider>
