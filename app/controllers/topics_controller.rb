@@ -14,7 +14,7 @@ class TopicsController < ApplicationController
 
 	def create
 		@topic = Topic.create(topics_params)
-		@topic.user = current_user.email
+		@topic.user_id = current_user.email
 
 		@topic.save
 

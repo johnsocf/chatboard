@@ -5,11 +5,14 @@
 		<% @topic.each do |topic| %>
 			<li>
 				<span class="board-section"><%= link_to topic.title, topic_path(topic) %></span>
-				<span class="board-section"><%= topic.user %></span>
+				<% if topic.image.exists? %>
+                    <span class="board-section"><%= image_tag topic.image.url(:thumb) %></span>
+                <% end %>
+				<span class="board-section"><%= topic.user_id %></span>
 				<span class="board-section"><%= topic.created_at.strftime("%r %a %b %e %Y") %></span>
 			</li>
 			<!-- <li>
-				<%= topic.user %>
+				<%= topic.user_id %>
 			</li>
 			<li>
 				<%= topic.created_at.strftime("%m/%d/%Y at %l") %>
