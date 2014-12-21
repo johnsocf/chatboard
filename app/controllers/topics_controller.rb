@@ -1,14 +1,24 @@
 class TopicsController < ApplicationController
 	include TopicsHelper
+	before_filter :zero_authors_or_authenticated, only: [:new, :create]
+
+	def zero_authors_or_authenticated
+	    unless User.count == 0 || current_user
+	        redirect_to root_path
+	        return false
+	    end
+	end
 
 	def index
 		@topic = Topic.all
 
 	end
+	end
 
 	def new
 		@topic = Topic.new
-		# puts topics_params.inspect
+		puts "**************************************"
+		puts topics_params.inspect
 
 	end
 

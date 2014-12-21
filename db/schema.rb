@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141207211843) do
+ActiveRecord::Schema.define(version: 20141221040148) do
 
   create_table "homes", force: true do |t|
     t.datetime "created_at"
@@ -27,15 +27,61 @@ ActiveRecord::Schema.define(version: 20141207211843) do
     t.datetime "updated_at"
   end
 
+  create_table "taggings", force: true do |t|
+    t.integer  "tag_id"
+    t.integer  "article_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "taggings", ["article_id"], name: "index_taggings_on_article_id"
+  add_index "taggings", ["tag_id"], name: "index_taggings_on_tag_id"
+
+  create_table "taggroups", force: true do |t|
+    t.integer  "tag_id"
+    t.integer  "topic_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "taggroups", ["tag_id"], name: "index_taggroups_on_tag_id"
+  add_index "taggroups", ["topic_id"], name: "index_taggroups_on_topic_id"
+
+  create_table "tags", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "topics", force: true do |t|
     t.string   "title"
     t.text     "content"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "user"
     t.string   "saved_title"
     t.string   "saved_content"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.string   "user_id"
+    t.integer  "user_id_id"
+    t.integer  "users_id"
   end
+
+  add_index "topics", ["user_id_id"], name: "index_topics_on_user_id_id"
+  add_index "topics", ["users_id"], name: "index_topics_on_users_id"
+
+  create_table "usergroups", force: true do |t|
+    t.integer  "topic_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "user_id"
+    t.string   "user_name"
+  end
+
+  add_index "usergroups", ["topic_id"], name: "index_usergroups_on_topic_id"
+  add_index "usergroups", ["user_id"], name: "index_usergroups_on_user_id"
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -52,9 +98,12 @@ ActiveRecord::Schema.define(version: 20141207211843) do
     t.datetime "updated_at"
     t.string   "saved_title"
     t.string   "saved_content"
+    t.integer  "topics_id"
+    t.string   "name"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  add_index "users", ["topics_id"], name: "index_users_on_topics_id"
 
 end
