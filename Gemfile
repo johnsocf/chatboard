@@ -3,7 +3,6 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'
-ruby '2.0.0'
 # Use sqlite3 as the database for Active Record
 group :development, :test do
   gem 'sqlite3'
@@ -26,7 +25,6 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'devise'
 gem "paperclip"
 
-gem "paperclip"
 
 gem 'bootstrap-sass', '~> 3.3.1'
 gem 'autoprefixer-rails'
