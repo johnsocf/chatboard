@@ -58,6 +58,7 @@ ActiveRecord::Schema.define(version: 20141221040148) do
     t.text     "content"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "user"
     t.string   "saved_title"
     t.string   "saved_content"
     t.string   "image_file_name"

@@ -13,6 +13,12 @@
 	<p>
 		on  <%= @topic.created_at.strftime("%B %e, %Y at %I:%M%p") %>
 	</p>
+	<p>Tags: 
+		<% @topic.tags.each do |tag| %>
+			<%= link_to tag.name, tag_path(tag) %>
+		<% end %>
+	</p>
+	<p><%= image_tag @topic.image.url(:thumb) %></p>
 	<p>
 		<%= @topic.content %>
 	</p>

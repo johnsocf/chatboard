@@ -2,7 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c8b47887-1303-4d21-affc-5230647d0474" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/topics/images/000/000/030/medium/Screen_Shot_2014-11-27_at_3.47.34_PM.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/topics/images/000/000/030/original/Screen_Shot_2014-11-27_at_3.47.34_PM.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/topics/images/000/000/030/thumb/Screen_Shot_2014-11-27_at_3.47.34_PM.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/topics/images/000/000/031/medium/Screen_Shot_2014-11-27_at_3.59.10_PM.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/topics/images/000/000/031/original/Screen_Shot_2014-11-27_at_3.59.10_PM.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/topics/images/000/000/031/thumb/Screen_Shot_2014-11-27_at_3.59.10_PM.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20141208015209_add_paperclip_to_article.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20141208024111_create_tags.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20141208033908_create_taggroups.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/tags/show.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/tag.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/models/tag_test.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/tagging.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/taggroup.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/models/taggroup_test.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/fixtures/taggroups.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/stylesheets/tags.css.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/tags.js.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/fixtures/tags.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/tags_controller.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/controllers/tags_controller_test.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/helpers/tags_helper.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/helpers/tags_helper_test.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/topics/show.html.erb" afterPath="$PROJECT_DIR$/app/views/topics/show.html.erb" />
     </list>
     <ignored path="chatboard.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,7 +54,7 @@
       <file leaf-file-name="schema.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/db/schema.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="13" selection-start="1093" selection-end="1095" vertical-scroll-proportion="18.12" vertical-offset="843" max-vertical-offset="1725">
+            <state line="16" column="13" selection-start="854" selection-end="854" vertical-scroll-proportion="18.12" vertical-offset="693" max-vertical-offset="1740">
               <folding />
             </state>
           </provider>
@@ -37,7 +63,7 @@
       <file leaf-file-name="topic.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/topic.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="21" selection-start="95" selection-end="95" vertical-scroll-proportion="-1.2" vertical-offset="0" max-vertical-offset="180">
+            <state line="0" column="21" selection-start="21" selection-end="21" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="180">
               <folding />
             </state>
           </provider>
@@ -46,7 +72,7 @@
       <file leaf-file-name="Gemfile" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="12" selection-start="129" selection-end="129" vertical-scroll-proportion="0.1736111" vertical-offset="0" max-vertical-offset="915">
+            <state line="8" column="12" selection-start="219" selection-end="219" vertical-scroll-proportion="0.1736111" vertical-offset="45" max-vertical-offset="945">
               <folding />
             </state>
           </provider>
@@ -271,14 +297,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="182" y="22" width="1045" height="731" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2154088" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33779904" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33779904" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
@@ -458,7 +484,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/db/schema.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="13" selection-start="1093" selection-end="1095" vertical-scroll-proportion="18.12" vertical-offset="843" max-vertical-offset="1725">
+        <state line="16" column="13" selection-start="854" selection-end="854" vertical-scroll-proportion="18.12" vertical-offset="693" max-vertical-offset="1740">
           <folding />
         </state>
       </provider>
@@ -472,14 +498,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/topic.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="21" selection-start="95" selection-end="95" vertical-scroll-proportion="-1.2" vertical-offset="0" max-vertical-offset="180">
+        <state line="0" column="21" selection-start="21" selection-end="21" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="180">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="12" selection-start="129" selection-end="129" vertical-scroll-proportion="0.1736111" vertical-offset="0" max-vertical-offset="915">
+        <state line="8" column="12" selection-start="219" selection-end="219" vertical-scroll-proportion="0.1736111" vertical-offset="45" max-vertical-offset="945">
           <folding />
         </state>
       </provider>
